@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static org.openqa.selenium.Keys.CONTROL;
 
 public class HomeTest extends TestBase {
     @Test
@@ -34,10 +35,9 @@ public class HomeTest extends TestBase {
         $("#lastName").setValue(lastName);
         $("#genterWrapper").$(byText(gender)).click();
         $("#userEmail").setValue(email);
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__year-select").$(byText(year)).click();
-        $(".react-datepicker__month-select").$(byText(month)).click();
-        $(".react-datepicker__day--00" + day).click();
+        $("#dateOfBirthInput").sendKeys(CONTROL + "A");
+        $("#dateOfBirthInput").sendKeys("08.02.1996");
+        $("#dateOfBirthInput").pressEnter();
         $("#userNumber").setValue(number);
         $("#subjectsContainer input").setValue(subject).pressEnter();
         $("#currentAddress").setValue(address);
