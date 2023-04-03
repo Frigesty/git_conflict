@@ -1,7 +1,6 @@
-package ru.frigesty;
+package frigesty;
 
 import org.junit.jupiter.api.Test;
-import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
