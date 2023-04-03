@@ -16,7 +16,7 @@ public class HomeTest extends TestBase {
                 address = "5212 CHURCH AVE BROOKLYN NY 11203-3555 USA",
                 email = "test@test.ru",
                 year = "1996",
-                month = "August",
+                moth = "August",
                 day = "2",
                 subject = "maths",
                 hobbies = "Sports",
@@ -36,7 +36,7 @@ public class HomeTest extends TestBase {
         $("#userEmail").setValue(email);
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").$(byText(year)).click();
-        $(".react-datepicker__month-select").$(byText(month)).click();
+        $(".react-datepicker__month-select").$(byText(moth)).click();
         $(".react-datepicker__day--00" + day).click();
         $("#userNumber").setValue(number);
         $("#subjectsContainer input").setValue(subject).pressEnter();
